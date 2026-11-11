@@ -153,7 +153,8 @@ All rules and question wording live in [`triage_engine.py`](triage_engine.py), a
 
 The tests use synthetic cases and the offline agent, so they don't need an API key. They check that:
 
-- each emergency warning sign routes to the ED including on the first message;
+- an emergency warning sign in each complaint group routes to the ED, including on the first message;
+- an urgent finding routes to Urgent Care;
 - incomplete, contradictory, out-of-scope, or under-18 cases never become Primary Care;
 - an unscreened warning sign is not treated as "no";
 - an adversarial agent that tries to set the outcome or clear a warning sign can't override the rules;
